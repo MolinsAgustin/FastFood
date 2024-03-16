@@ -35,13 +35,13 @@ public class testTPO {
 	        int horarioTicket = generarHorarioTicket(horarioAnterior, minutosASumar);
 
 	        if (prioridad == 1) {
-	            System.out.println("Ticket: PDL" + administradorFF.acolar(-200) + "  -->  [" + 200 + "]");
+	            System.out.println("ID Ticket: " + cont + " | Ticket: PDL" + administradorFF.acolar(-200) + "  -->  [" + 200 + "]");
 	        } else if (prioridad == 2) {
-	            System.out.println("Ticket: PAS" + administradorFF.acolar(-140) + "  -->  [" + 140 + "]");
+	            System.out.println("ID Ticket: " + cont + " | Ticket: PAS" + administradorFF.acolar(-140) + "  -->  [" + 140 + "]");
 	        } else if (prioridad == 3) {
-	            System.out.println("Ticket: AM" + administradorFF.acolar(-40) + "  -->  [" + 40 + "]");
+	            System.out.println("ID Ticket: " + cont + " | Ticket: AM" + administradorFF.acolar(-40) + "  -->  [" + 40 + "]");
 	        } else if (prioridad == 4) {
-	            System.out.println("Ticket: RDP" + administradorFF.acolar(-horarioTicket) + "  -->  [" + horarioTicket + "]");
+	            System.out.println("ID Ticket: " + cont + " | Ticket: RDP" + administradorFF.acolar(-horarioTicket) + "  -->  [" + horarioTicket + "]");
 	        }
 
 	        cont++;
