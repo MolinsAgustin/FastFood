@@ -41,6 +41,9 @@ public class AdministradorDeColasPrioridad implements AdministradorDeColasTDA {
 		DicclientesPrioridadId.agregar(identificador, demora);
 		identificadoresCola.agregar(identificador);
 		horaFormateada = Integer.parseInt(horaActual.format(DateTimeFormatter.ofPattern("HHmm")));
+		if (identificador%2==0) {
+			horaActual = horaActual.plusMinutes(1);
+		}
 		return horaFormateada;
 	}
 
