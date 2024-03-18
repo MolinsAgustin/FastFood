@@ -11,7 +11,7 @@ Desarrollar un programa para gestionar los turnos para atención de una Fast Foo
 
 # Funcionamiento del sistema
 En primer lugar, el sistema genera de manera aleatoria 100 tickets con los distintos platos ofrecidos por el FastFood, detallando lo siguiente:
--**ID TICKET**: número que identifica inequívocamente al ticket.
+-´ID TICKET´: número que identifica inequívocamente al ticket.\n
 -**Ticket**: pedido realizado con la nomenclatura detallada en el enunciado.
 -**Prioridad**: orden de importancia a partir del plato pedido.
 En estos 100 tickets, el sistema calcula 2 clientes por minuto.
