@@ -6,7 +6,7 @@ Desarrollar un programa para gestionar los turnos para atención de una Fast Foo
 
 1- **Venta de Plato del día**. Prefijo *PDL* Prioridad *200*.
 
-2- **Pastas**. Prefijo *PAS*. Prioridad: *140.
+2- **Pastas**. Prefijo *PAS*. Prioridad: *140*.
 
 3- **Hamburguesas**. Prefijo *AM*. Prioridad *40*. 
 
