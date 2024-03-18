@@ -31,3 +31,8 @@ Para que la hora del pedido (detallada en el ticket) y la hora del llamado sean 
 
 En primer lugar hay que clonar el repositorio a un repositorio local.
 Luego, abrir tu IDE de preferencia (nosotros usamos Eclipse) y ejecutar el archivo [testTPO](src/tpo/testTPO.java).
+
+# Sugerencias
+
+Si tenes alguna idea para mejorar nuestro proyecto o encontraste algún error, no dudes hacer un pull request. Tu retroalimentación nos ayuda a crear una experiencia aún mejor y a mejorar constantemente. También puedes contactarme en mi [email](mailto:camolins2404@gmail.com).
+
