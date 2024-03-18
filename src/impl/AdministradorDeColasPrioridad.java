@@ -1,5 +1,8 @@
 package impl;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 import apis.AdministradorDeColasTDA;
 import apis.ColaPrioridadTDA;
 import apis.ConjuntoTDA;
@@ -15,12 +18,14 @@ public class AdministradorDeColasPrioridad implements AdministradorDeColasTDA {
 	private DiccionarioSimpleTDA DicclientesPrioridadId;
 	private ConjuntoTDA identificadoresCola;
 	private int identificador;
-	
+	private LocalTime horaActual;
+	private int horaFormateada;
 	
 	@Override
 	public void inicializar(int cantidad) {
 		cantPuestos = cantidad;
 		identificador = 0;
+		horaActual = LocalTime.now();
 		puestos = new DicSimpleL();
 		colaClientes = new ColaPrioridadLD();
 		clienteXpuesto = new DicMultipleL();
@@ -35,7 +40,8 @@ public class AdministradorDeColasPrioridad implements AdministradorDeColasTDA {
 		colaClientes.acolarPrioridad(identificador, demora);
 		DicclientesPrioridadId.agregar(identificador, demora);
 		identificadoresCola.agregar(identificador);
-		return identificador;
+		horaFormateada = Integer.parseInt(horaActual.format(DateTimeFormatter.ofPattern("HHmm")));
+		return horaFormateada;
 	}
 
 	@Override
