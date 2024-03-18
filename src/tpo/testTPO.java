@@ -1,19 +1,7 @@
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///											   TRABAJO PRACTICO PROGRAMACION 2									   ///
-///										GRUPO NXX - VIERNES NOCHE - 2DO CUATRIMESTRE							   ///
-///										    REPETTO	FRANCO	- MOLINS CRISTIAN									   ///
-/// 	UADE 2023																								   ///
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 package tpo;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.List;
-
 
 import apis.AdministradorDeColasTDA;
 import impl.AdministradorDeColasPrioridad;
@@ -26,7 +14,6 @@ public class testTPO {
 	
 	public static void cargarColaPrioridad(AdministradorDeColasTDA administradorFF, int cantidadClientes) {
 	    int cont = 1;
-	    int horaInicio = 8;
 	    int minutosASumar = 1;
 	    int horarioAnterior = 800;
         System.out.println(" -- Creando tickets para cada cliente y su pedido...\n");
@@ -35,13 +22,13 @@ public class testTPO {
 	        int horarioTicket = generarHorarioTicket(horarioAnterior, minutosASumar);
 
 	        if (prioridad == 1) {
-	            System.out.println("ID Ticket: " + cont + " | Ticket: PDL" + administradorFF.acolar(-200) + "  -->  [" + 200 + "]");
+	        	System.out.println("ID Ticket: " + String.format("%03d", cont) + " | Ticket: PDL" + administradorFF.acolar(-200) + "  -->  [" + 200 + "]");
 	        } else if (prioridad == 2) {
-	            System.out.println("ID Ticket: " + cont + " | Ticket: PAS" + administradorFF.acolar(-140) + "  -->  [" + 140 + "]");
+	            System.out.println("ID Ticket: " + String.format("%03d", cont) + " | Ticket: PAS" + administradorFF.acolar(-140) + "  -->  [" + 140 + "]");
 	        } else if (prioridad == 3) {
-	            System.out.println("ID Ticket: " + cont + " | Ticket: AM" + administradorFF.acolar(-40) + "  -->  [" + 40 + "]");
+	            System.out.println("ID Ticket: " + String.format("%03d", cont) + " | Ticket: AM" + administradorFF.acolar(-40) + "  -->  [" + 40 + "]");
 	        } else if (prioridad == 4) {
-	            System.out.println("ID Ticket: " + cont + " | Ticket: RDP" + administradorFF.acolar(-horarioTicket) + "  -->  [" + horarioTicket + "]");
+	            System.out.println("ID Ticket: " + String.format("%03d", cont) + " | Ticket: RDP" + administradorFF.acolar(-horarioTicket) + "  -->  [" + horarioTicket + "]");
 	        }
 
 	        cont++;
@@ -56,7 +43,7 @@ public class testTPO {
             for (int i = 1; i <= cantidadPuestos; i++) {
             	id = administradorFF.desacolar(i);
                 if(id != -1) {
-                    System.out.println("ID del Ticket: " + id + "\t||  Puesto: " + i + "\t||  Hora del llamado: " + obtenerHoraActual());
+                    System.out.println("ID del Ticket: " + String.format("%03d", id) + "\t||  Puesto: " + i + "\t||  Hora del llamado: " + obtenerHoraActual());
                 } else {
                     fin = true;
                 }
@@ -121,8 +108,10 @@ public class testTPO {
 
         return horaInicio * 100 + minutos;
     }
+   
+   }
     
     
     
-}
+
 

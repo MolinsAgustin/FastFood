@@ -44,4 +44,5 @@ public interface AdministradorDeColasTDA {
 	int Prioridad (); // Devuelve la prioridad
 	
 	// siempre que el TDA esté inicializado y cola no esté vacía
+
 }
